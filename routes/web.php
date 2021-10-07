@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ImoveisController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/imoveis/cadastro',[ImoveisController::class, 'index'])->middleware('auth');  
+  
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/cadastro-imoveis', function () {
+    return view('cadastro-imoveis');
+})->name('cadastro-imoveis');
