@@ -35,7 +35,7 @@
                 <a class="nav-link disabled">Sou propietário</a>
                 </li>
             </ul>
-            <a class="nav-link" href="adm/index">Logar</a>
+            <a class="nav-link" href="/login">Logar</a>
             </div>
         </div>
     </nav>
